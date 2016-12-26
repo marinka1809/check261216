@@ -1,0 +1,176 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+body {
+  font: 11px/15px 'Lato', sans-serif; }
+
+.hover-block {
+  display: none; }
+
+.button {
+  display: inline-block;
+  border: none; }
+
+#header .top-register {
+  color: #555152;
+  text-align: right;
+  background-color: #efefef; }
+  #header .top-register a.fa {
+    margin-right: 10px;
+    font-size: 1.3em;
+    color: #898686; }
+  #header .top-register .button {
+    width: 150px;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 2em; }
+  #header .top-register .donate {
+    color: #ffffff;
+    background-color: #61a70a; }
+  #header .top-register .volunteer {
+    background-color: #fdcd05; }
+
+#header .logo {
+  width: 153px;
+  height: 37px;
+  margin: 20px 0;
+  overflow: hidden; }
+
+#header .nav-wrapper {
+  margin: 0;
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  #header .nav-wrapper .mob-menu-button {
+    margin: 20px;
+    background-color: transparent; }
+  #header .nav-wrapper .main-nav {
+    padding: 10px 0 0; }
+    #header .nav-wrapper .main-nav > li {
+      padding: 0 5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-right: 1px solid #898686;
+      line-height: 1em; }
+      #header .nav-wrapper .main-nav > li > a {
+        padding: 0;
+        text-transform: uppercase; }
+      #header .nav-wrapper .main-nav > li:hover .hover-block {
+        display: inline-block; }
+    #header .nav-wrapper .main-nav .hover-block {
+      font-size: 0.7em; }
+      #header .nav-wrapper .main-nav .hover-block a {
+        color: inherit;
+        text-transform: capitalize; }
+        #header .nav-wrapper .main-nav .hover-block a:hover {
+          color: #63a707; }
+
+.welcom-section {
+  background-color: #898686; }
+  .welcom-section .welcom-top-nav {
+    margin: 0;
+    background: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .welcom-section .welcom-top-nav .main-nav {
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+      .welcom-section .welcom-top-nav .main-nav li {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        width: -webkit-calc(100%/7);
+        width: calc(100%/7);
+        color: #ffffff;
+        border-right: 1px solid #ffffff; }
+        .welcom-section .welcom-top-nav .main-nav li:hover .hover-block {
+          display: inline-block; }
+    .welcom-section .welcom-top-nav .button-nav {
+      border: none;
+      background: transparent;
+      text-transform: uppercase; }
+
+.home-page-section .titel-first {
+  padding: 10px 10px 10px 40px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  background: #61a70a; }
+  .home-page-section .titel-first:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 40px;
+    top: 0;
+    bottom: 0;
+    background: #f32b34; }
+
+@media screen and (min-width: 768px) {
+  body {
+    font: 13px/18px 'Lato', sans-serif; }
+  #header .logo {
+    width: 307px;
+    height: 75px;
+    margin: 40px 0;
+    overflow: hidden; } }
+
+@media screen and (min-width: 992px) {
+  body {
+    font: 15px/21px 'Lato', sans-serif; } }
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 960px; } }

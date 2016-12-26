@@ -1,0 +1,155 @@
+@import "reset";
+
+body {
+  font: 11px/15px 'Lato', sans-serif;
+}
+
+.hover-block {
+  display: none;
+}
+.button {
+  display: inline-block;
+  border: none;
+}
+
+//--------HEADER--------
+#header{
+ .top-register {
+   color: #555152;
+   text-align: right;
+   background-color: #efefef;
+
+   a.fa {
+     margin-right: 10px;
+     font-size: 1.3em;
+     color: #898686;
+   }
+
+   .button {
+     width: 150px;
+     padding: 0 20px;
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 1em;
+     line-height: 2em;
+   }
+   .donate {
+     color: #ffffff;
+     background-color: #61a70a;
+   }
+    .volunteer {
+      background-color: #fdcd05;
+    }
+ }
+  .logo {
+    width: 153px;
+    height: 37px;
+    margin: 20px 0;
+    overflow: hidden;
+  }
+
+  .nav-wrapper {
+    margin: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    .mob-menu-button {
+      margin: 20px;
+      background-color: transparent;
+    }
+
+    .main-nav {
+      padding: 10px 0 0;
+
+     > li {
+        padding: 0 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-right: 1px solid #898686;
+        line-height: 1em;
+
+       > a {
+         padding: 0;
+         text-transform: uppercase;
+       }
+
+       &:hover {
+         .hover-block {
+           display: inline-block;
+         }
+       }
+     }
+      .hover-block {
+        font-size: 0.7em;
+        a {
+          color: inherit;
+          text-transform: capitalize;
+          &:hover {
+            color: #63a707;
+          }
+        }
+      }
+    }
+  }
+}
+
+//--------welcom-section--------
+.welcom-section {
+  background-color: #898686;
+
+  .welcom-top-nav {
+    margin: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    .main-nav {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      li {
+        box-sizing: border-box;
+        width: calc(100%/7);
+        color: #ffffff;
+        border-right: 1px solid #ffffff;
+
+        &:hover {
+          .hover-block {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .button-nav {
+      border: none;
+      background: transparent;
+      text-transform: uppercase;
+    }
+  }
+}
+//-------------home-page-section-----
+.home-page-section {
+  .titel-first {
+    padding: 10px 10px 10px 40px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    background: #61a70a;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 40px;
+      top: 0;
+      bottom: 0;
+      background: #f32b34;
+    }
+  }
+}
+@import "media768";
+@import "media992";
+@import "media1200";
