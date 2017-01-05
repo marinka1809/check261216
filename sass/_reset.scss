@@ -57,4 +57,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 a {
   text-decoration: none;
   cursor: pointer;
+
+
+  &:hover {
+    text-decoration: none;
+  }
 }

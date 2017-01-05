@@ -49,15 +49,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 a {
   text-decoration: none;
   cursor: pointer; }
+  a:hover {
+    text-decoration: none; }
 
 body {
-  font: 11px/15px 'Lato', sans-serif; }
+  font: 11px/15px 'Lato', sans-serif;
+  line-height: 1.2em; }
 
 .hover-block {
   display: none; }
 
 .button {
-  display: inline-block;
   border: none; }
 
 #header .top-register {
@@ -68,6 +70,10 @@ body {
     margin-right: 10px;
     font-size: 1.3em;
     color: #898686; }
+    #header .top-register a.fa:hover {
+      -webkit-transform: scale(1.1, 1.1);
+          -ms-transform: scale(1.1, 1.1);
+              transform: scale(1.1, 1.1); }
   #header .top-register .button {
     width: 150px;
     padding: 0 20px;
@@ -104,59 +110,131 @@ body {
       font-weight: bold;
       border-right: 1px solid #898686;
       line-height: 1em; }
+      #header .nav-wrapper .main-nav > li.last {
+        border-right: 0; }
       #header .nav-wrapper .main-nav > li > a {
         padding: 0;
         text-transform: uppercase; }
+        #header .nav-wrapper .main-nav > li > a:hover {
+          color: #7aa52a; }
       #header .nav-wrapper .main-nav > li:hover .hover-block {
         display: inline-block; }
-    #header .nav-wrapper .main-nav .hover-block {
-      font-size: 0.7em; }
-      #header .nav-wrapper .main-nav .hover-block a {
-        color: inherit;
-        text-transform: capitalize; }
-        #header .nav-wrapper .main-nav .hover-block a:hover {
-          color: #63a707; }
+  #header .nav-wrapper .hover-block {
+    position: absolute;
+    z-index: 4;
+    left: -30px;
+    width: 150px;
+    padding: 20px 0;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.8em;
+    text-align: center;
+    background-color: #acaaaa;
+    border-top: 10px solid #ffffff; }
+    #header .nav-wrapper .hover-block a {
+      color: #ffffff;
+      text-transform: capitalize; }
+      #header .nav-wrapper .hover-block a:hover {
+        color: #7aa52a; }
+    #header .nav-wrapper .hover-block:before {
+      content: "";
+      position: absolute;
+      z-index: 6;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      border: 10px solid transparent;
+      border-top: 12px solid #ffffff; }
 
-.welcom-section {
+.welcome-section {
   background-color: #898686; }
-  .welcom-section .welcom-top-nav {
+  .welcome-section #welcome-navbar-collapse {
+    padding: 0; }
+  .welcome-section .welcome-top-nav {
     margin: 0;
+    padding: 0;
     background: transparent;
     border: none;
     -webkit-box-shadow: none;
             box-shadow: none; }
-    .welcom-section .welcom-top-nav .main-nav {
+    .welcome-section .welcome-top-nav .main-nav {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
       width: 100%;
+      height: 100%;
       margin: 0;
       padding: 0; }
-      .welcom-section .welcom-top-nav .main-nav li {
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+      .welcome-section .welcome-top-nav .main-nav .nav-button {
+        position: relative;
         width: -webkit-calc(100%/7);
         width: calc(100%/7);
+        padding: 10px 5px;
+        font-size: 1.1em;
         color: #ffffff;
         border-right: 1px solid #ffffff; }
-        .welcom-section .welcom-top-nav .main-nav li:hover .hover-block {
+        .welcome-section .welcome-top-nav .main-nav .nav-button:hover .hover-block {
           display: inline-block; }
-    .welcom-section .welcom-top-nav .button-nav {
+        .welcome-section .welcome-top-nav .main-nav .nav-button.first {
+          border-left: 1px solid #ffffff; }
+    .welcome-section .welcome-top-nav .button-nav {
       border: none;
       background: transparent;
       text-transform: uppercase; }
+    .welcome-section .welcome-top-nav .hover-block {
+      position: absolute;
+      z-index: 2;
+      top: 100%;
+      left: 0;
+      width: 400px;
+      padding: 30px 0;
+      font-size: 0.9em;
+      line-height: 1.8em;
+      background-color: #f6f6f6; }
+      .welcome-section .welcome-top-nav .hover-block li {
+        padding-left: 45px; }
+      .welcome-section .welcome-top-nav .hover-block a {
+        color: #555152; }
+        .welcome-section .welcome-top-nav .hover-block a:hover {
+          color: #7aa52a; }
+      .welcome-section .welcome-top-nav .hover-block:before {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 14%;
+        border: 15px solid transparent;
+        border-top: 15px solid #898686; }
 
-.home-page-section .titel-first {
-  padding: 10px 10px 10px 40px;
+.home-page-section header {
+  padding: 10px 15px 10px 6em;
   position: relative;
-  display: inline-block;
-  text-transform: uppercase;
+  color: #ffffff;
   background: #61a70a; }
-  .home-page-section .titel-first:before {
+  .home-page-section header h1 {
+    font-size: 1.6em;
+    text-transform: uppercase; }
+  .home-page-section header p {
+    font-size: 1.1em; }
+  .home-page-section header:before {
     content: "";
     position: absolute;
     left: 0;
-    right: 40px;
+    width: 5em;
     top: 0;
     bottom: 0;
     background: #f32b34; }
+  .home-page-section header:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 @media screen and (min-width: 768px) {
   body {
@@ -169,8 +247,8 @@ body {
 
 @media screen and (min-width: 992px) {
   body {
-    font: 15px/21px 'Lato', sans-serif; } }
+    font: 15px 'Lato', sans-serif; } }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 960px; } }
+    width: 990px; } }
