@@ -1,10 +1,15 @@
 $top-nav-color: #555152;
 $nav-hover-color: #7aa52a;
+$blue: #00709e;
+$red: #b5353b;
+$yellow: #f1cc32;
+$secondary-font: 'Muli', sans-serif;
 
 @import "reset";
 
 body {
   font: 11px/15px 'Lato', sans-serif;
+  color: $top-nav-color;
   line-height: 1.2em;
 }
 .hover-block {
@@ -233,12 +238,12 @@ body {
 
     h1 {
       font-size: 1.6em;
+      font-weight: bold;
       text-transform: uppercase;
     }
-    p{
+    p {
       font-size: 1.1em;
     }
-
 
     &:before {
       content: "";
@@ -249,15 +254,239 @@ body {
       bottom: 0;
       background: #f32b34;
     }
+  }
 
-    &:after {
-      content:"";
-      display: table;
-      clear:both;
+  .content-text {
+    padding-top: 20px;
+    padding-bottom: 45px;
+
+  }
+
+  .first-h2 {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    color: $nav-hover-color;
+    text-align: right;
+  }
+
+  .first-p {
+    font: 1em $secondary-font;
+    line-height: 1.4;
+  }
+
+  .list-text {
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+
+    li {
+      padding: 0;
+    }
+
+    h2 {
+      padding: 10px;
+      font-size: 1.5em;
+      color: #ffffff;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .fa {
+      font-size: 1.4em;
+    }
+
+    .wrapp {
+      padding: 20px 20px 40px;
+    }
+
+    .button-link {
+      display: block;
+      width: 185px;
+      margin: 0 auto;
+      padding:0 10px;
+      font: bold 1em/2em 'Lato', sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #e6e5e5;
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+
+
+      &.purple {
+        color: #742e8a;
+        margin-bottom: 15px;
+      }
+
+      &.orange {
+        color: #ff8a00;
+      }
+
+      &.blue {
+        font-size: 1.2em;
+        color: $blue;
+      }
+
+    }
+  }
+
+  .news {
+    h2 {
+      background-color: $blue;
+    }
+
+    li {
+      margin-bottom: 30px;
+
+      a {
+        color: $blue;
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: 1.3em;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .announc {
+
+    h2 {
+      background-color: $red;
+    }
+
+    ul {
+      font: 1.2em $secondary-font;
+      padding: 20px 0 40px;
+      border-right: 2px dotted $top-nav-color;
+      border-left: 2px dotted $top-nav-color;
+
+      li {
+        padding: 0 20px;
+        margin-bottom: 20px;
+      }
+
+      .center-block {
+        padding: 20px 20px;
+        border-top: 2px dotted $top-nav-color;
+        border-bottom: 2px dotted $top-nav-color;
+        background-color: #e6e5e5;
+      }
+    }
+    a {
+      font-family: 'Lato', sans-serif;
+      color: $nav-hover-color;
+      text-decoration: underline;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .calendar {
+    h2 {
+      color: $top-nav-color;
+      background-color: $yellow;
+    }
+
+    .wrapp {
+     font: 1.2em $secondary-font;
+    }
+
+    ul {
+      margin: 10px 0;
+
+      li{
+        margin-bottom: 30px;
+      }
+    }
+
+    h3, strong {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #fdcd05;
+      text-transform: uppercase;
+    }
+
+    strong {
+      float: left;
+      margin-right: 10px;
+    }
+
+
+
+  }
+
+  .big-button {
+    display: block;
+    padding: 10px 20px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #61a70a;
+
+    .fa {
+      padding-left: 0.3em;
+      font-size: 1.7em;
+    }
+
+    &:hover {
+      color: #e6e5e5;
     }
   }
 }
 
+
+#footer {
+  background-color: #898686;
+  padding-top: 20px;
+
+  .top-flex-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 10px;
+
+    .logo {
+      padding: 0 10px;
+      font-size: 1.3em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .right-group {
+      display: inline-flex;
+    }
+    .fa {
+      color: #ffffff;
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+  }
+
+  .flex-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    margin-top: 20px;
+    padding: 15px 0;
+    background-color: #efefef;
+
+    ul {
+      display: inline-flex;
+    }
+  }
+
+}
 @import "media768";
 @import "media992";
 @import "media1200";

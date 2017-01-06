@@ -54,6 +54,7 @@ a {
 
 body {
   font: 11px/15px 'Lato', sans-serif;
+  color: #555152;
   line-height: 1.2em; }
 
 .hover-block {
@@ -220,6 +221,7 @@ body {
   background: #61a70a; }
   .home-page-section header h1 {
     font-size: 1.6em;
+    font-weight: bold;
     text-transform: uppercase; }
   .home-page-section header p {
     font-size: 1.1em; }
@@ -231,10 +233,186 @@ body {
     top: 0;
     bottom: 0;
     background: #f32b34; }
-  .home-page-section header:after {
-    content: "";
-    display: table;
-    clear: both; }
+
+.home-page-section .content-text {
+  padding-top: 20px;
+  padding-bottom: 45px; }
+
+.home-page-section .first-h2 {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  color: #7aa52a;
+  text-align: right; }
+
+.home-page-section .first-p {
+  font: 1em "Muli", sans-serif;
+  line-height: 1.4; }
+
+.home-page-section .list-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 0; }
+  .home-page-section .list-text li {
+    padding: 0; }
+  .home-page-section .list-text h2 {
+    padding: 10px;
+    font-size: 1.5em;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase; }
+  .home-page-section .list-text .fa {
+    font-size: 1.4em; }
+  .home-page-section .list-text .wrapp {
+    padding: 20px 20px 40px; }
+  .home-page-section .list-text .button-link {
+    display: block;
+    width: 185px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font: bold 1em/2em 'Lato', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #e6e5e5; }
+    .home-page-section .list-text .button-link:hover {
+      -webkit-transform: scale(1.1, 1.1);
+          -ms-transform: scale(1.1, 1.1);
+              transform: scale(1.1, 1.1); }
+    .home-page-section .list-text .button-link.purple {
+      color: #742e8a;
+      margin-bottom: 15px; }
+    .home-page-section .list-text .button-link.orange {
+      color: #ff8a00; }
+    .home-page-section .list-text .button-link.blue {
+      font-size: 1.2em;
+      color: #00709e; }
+
+.home-page-section .news h2 {
+  background-color: #00709e; }
+
+.home-page-section .news li {
+  margin-bottom: 30px; }
+  .home-page-section .news li a {
+    color: #00709e;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.3em; }
+    .home-page-section .news li a:hover {
+      text-decoration: underline; }
+
+.home-page-section .announc h2 {
+  background-color: #b5353b; }
+
+.home-page-section .announc ul {
+  font: 1.2em "Muli", sans-serif;
+  padding: 20px 0 40px;
+  border-right: 2px dotted #555152;
+  border-left: 2px dotted #555152; }
+  .home-page-section .announc ul li {
+    padding: 0 20px;
+    margin-bottom: 20px; }
+  .home-page-section .announc ul .center-block {
+    padding: 20px 20px;
+    border-top: 2px dotted #555152;
+    border-bottom: 2px dotted #555152;
+    background-color: #e6e5e5; }
+
+.home-page-section .announc a {
+  font-family: 'Lato', sans-serif;
+  color: #7aa52a;
+  text-decoration: underline;
+  font-weight: bold; }
+  .home-page-section .announc a:hover {
+    text-decoration: none; }
+
+.home-page-section .calendar h2 {
+  color: #555152;
+  background-color: #f1cc32; }
+
+.home-page-section .calendar .wrapp {
+  font: 1.2em "Muli", sans-serif; }
+
+.home-page-section .calendar ul {
+  margin: 10px 0; }
+  .home-page-section .calendar ul li {
+    margin-bottom: 30px; }
+
+.home-page-section .calendar h3, .home-page-section .calendar strong {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fdcd05;
+  text-transform: uppercase; }
+
+.home-page-section .calendar strong {
+  float: left;
+  margin-right: 10px; }
+
+.home-page-section .big-button {
+  display: block;
+  padding: 10px 20px 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #61a70a; }
+  .home-page-section .big-button .fa {
+    padding-left: 0.3em;
+    font-size: 1.7em; }
+  .home-page-section .big-button:hover {
+    color: #e6e5e5; }
+
+#footer {
+  background-color: #898686;
+  padding-top: 20px; }
+  #footer .top-flex-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 10px; }
+    #footer .top-flex-group .logo {
+      padding: 0 10px;
+      font-size: 1.3em;
+      font-weight: bold;
+      text-transform: uppercase; }
+    #footer .top-flex-group .right-group {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+    #footer .top-flex-group .fa {
+      color: #ffffff;
+      font-size: 1.5em;
+      margin-right: 10px; }
+  #footer .flex-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  #footer .copyright {
+    margin-top: 20px;
+    padding: 15px 0;
+    background-color: #efefef; }
+    #footer .copyright ul {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
 
 @media screen and (min-width: 768px) {
   body {
