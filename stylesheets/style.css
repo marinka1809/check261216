@@ -114,19 +114,26 @@ body {
   #header .nav-wrapper .collapsing {
     position: absolute;
     top: 70px;
-    left: 0;
-    right: 0;
+    left: 15px;
+    right: 15px;
     z-index: 4;
     background-color: #ffffff; }
   #header .nav-wrapper .collapse.in {
     position: absolute;
     top: 70px;
-    left: 0;
-    right: 0;
+    left: 15px;
+    right: 15px;
     z-index: 4;
     background-color: #ffffff; }
   #header .nav-wrapper .main-nav {
     padding: 10px 0 0; }
+    #header .nav-wrapper .main-nav .open > a {
+      color: #7aa52a;
+      background-color: transparent; }
+    #header .nav-wrapper .main-nav .open .caret {
+      border-top: 6px dashed #7aa52a;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent; }
     #header .nav-wrapper .main-nav > li {
       padding: 0 5px;
       text-transform: uppercase;
@@ -136,12 +143,20 @@ body {
       #header .nav-wrapper .main-nav > li.last {
         border-right: 0; }
       #header .nav-wrapper .main-nav > li > a {
+        display: inline-block;
         padding: 0;
         text-transform: uppercase; }
         #header .nav-wrapper .main-nav > li > a:hover {
           color: #7aa52a; }
-      #header .nav-wrapper .main-nav > li:hover .hover-block {
-        display: block; }
+      #header .nav-wrapper .main-nav > li .caret {
+        margin: 0 0 0 1em;
+        border-top: 6px dashed;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent; }
+        #header .nav-wrapper .main-nav > li .caret:hover {
+          border-top: 6px dashed #7aa52a;
+          border-right: 6px solid transparent;
+          border-left: 6px solid transparent; }
   #header .nav-wrapper .hover-block {
     positton: relative;
     padding: 10px;
@@ -151,12 +166,17 @@ body {
     line-height: 1.8em;
     text-align: center;
     background-color: #acaaaa;
-    border-top: 10px solid #ffffff; }
+    border-top: 10px solid #ffffff;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
     #header .nav-wrapper .hover-block a {
       color: #ffffff;
       text-transform: capitalize; }
       #header .nav-wrapper .hover-block a:hover {
-        color: #7aa52a; }
+        color: #7aa52a;
+        background-color: transparent; }
     #header .nav-wrapper .hover-block:before {
       content: "";
       position: absolute;
@@ -168,10 +188,65 @@ body {
       border: 10px solid transparent;
       border-top: 12px solid #ffffff; }
 
-.welcome-section {
+.bottom-nav {
   background-color: #898686; }
-  .welcome-section #welcome-navbar-collapse {
+  .bottom-nav #welcome-navbar-collapse {
     padding: 0; }
+    .bottom-nav #welcome-navbar-collapse .nav-button {
+      position: relative;
+      padding: 10px 5px;
+      font-size: 1.1em;
+      color: #ffffff; }
+    .bottom-nav #welcome-navbar-collapse .open .button-nav {
+      background-color: transparent;
+      color: #7aa52a; }
+    .bottom-nav #welcome-navbar-collapse .open .caret {
+      border-top: 8px dashed #7aa52a;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent; }
+    .bottom-nav #welcome-navbar-collapse .button-nav {
+      display: inline-block;
+      float: left;
+      padding: 0;
+      text-transform: uppercase;
+      text-align: center;
+      color: inherit;
+      line-height: inherit; }
+      .bottom-nav #welcome-navbar-collapse .button-nav:hover {
+        color: #7aa52a; }
+    .bottom-nav #welcome-navbar-collapse .caret {
+      margin: 0.2em 0 0 1em;
+      border-top: 8px dashed;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent; }
+      .bottom-nav #welcome-navbar-collapse .caret:hover {
+        border-top: 8px dashed #7aa52a;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent; }
+    .bottom-nav #welcome-navbar-collapse .hover-block {
+      width: 80%;
+      margin: 0 20px;
+      padding: 15px 0 10px;
+      font-size: 0.9em;
+      line-height: 1.8em;
+      background-color: #f6f6f6;
+      border-top: 5px solid #898686;
+      -webkit-border-radius: 0;
+              border-radius: 0; }
+      .bottom-nav #welcome-navbar-collapse .hover-block li {
+        padding-left: 25px; }
+      .bottom-nav #welcome-navbar-collapse .hover-block a {
+        color: #555152; }
+        .bottom-nav #welcome-navbar-collapse .hover-block a:hover {
+          color: #7aa52a; }
+      .bottom-nav #welcome-navbar-collapse .hover-block:before {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 27px;
+        left: 15%;
+        border: 15px solid transparent;
+        border-top: 15px solid #898686; }
 
 .welcome-top-nav {
   position: relative;
@@ -197,15 +272,15 @@ body {
   .welcome-top-nav .collapsing {
     position: absolute;
     top: 50px;
-    left: 10px;
-    right: 10px;
+    left: 15px;
+    right: 15px;
     z-index: 1;
     background-color: #898686; }
   .welcome-top-nav .collapse.in {
     position: absolute;
     top: 50px;
-    left: 10px;
-    right: 10px;
+    left: 15px;
+    right: 15px;
     z-index: 1;
     background-color: #898686; }
   .welcome-top-nav .main-nav {
@@ -222,53 +297,23 @@ body {
     height: 100%;
     margin: 0;
     padding: 0; }
-    .welcome-top-nav .main-nav .nav-button {
-      position: relative;
-      padding: 10px 5px;
-      font-size: 1.1em;
-      color: #ffffff; }
-      .welcome-top-nav .main-nav .nav-button:hover .hover-block, .welcome-top-nav .main-nav .nav-button:focus .hover-block {
-        display: block; }
-  .welcome-top-nav .button-nav {
-    border: none;
-    background: transparent;
-    text-transform: uppercase; }
-  .welcome-top-nav .hover-block {
-    width: 80%;
-    margin: 0 20px;
-    padding: 15px 0 10px;
-    font-size: 0.9em;
-    line-height: 1.8em;
-    background-color: #f6f6f6;
-    border-top: 5px solid #898686; }
-    .welcome-top-nav .hover-block li {
-      padding-left: 25px; }
-    .welcome-top-nav .hover-block a {
-      color: #555152; }
-      .welcome-top-nav .hover-block a:hover {
-        color: #7aa52a; }
-    .welcome-top-nav .hover-block:before {
-      content: "";
-      position: absolute;
-      z-index: 3;
-      top: 27px;
-      left: 15%;
-      border: 15px solid transparent;
-      border-top: 15px solid #898686; }
 
-.home-page-section header {
+.home-page-section .welcome {
   padding: 10px 15px 10px 6em;
   position: relative;
   color: #ffffff;
   background: #61a70a; }
-  .home-page-section header h1 {
+  .home-page-section .welcome p {
     font-size: 1.6em;
     line-height: 1.2em;
     font-weight: bold;
     text-transform: uppercase; }
-  .home-page-section header p {
-    font-size: 1.1em; }
-  .home-page-section header:before {
+  .home-page-section .welcome span {
+    display: block;
+    font-size: 0.9em;
+    text-transform: none;
+    font-weight: normal; }
+  .home-page-section .welcome:before {
     content: "";
     position: absolute;
     left: 0;
@@ -281,7 +326,7 @@ body {
   padding-top: 20px;
   padding-bottom: 45px; }
 
-.home-page-section .first-h2 {
+.home-page-section .first-h {
   margin-bottom: 15px;
   font-size: 1.6em;
   text-transform: uppercase;
@@ -298,13 +343,17 @@ body {
   margin: 0; }
   .home-page-section .list-text li {
     padding: 0; }
-  .home-page-section .list-text h2 {
+  .home-page-section .list-text h3 {
     padding: 10px;
     font-size: 1.5em;
     color: #ffffff;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase; }
+    .home-page-section .list-text h3 a {
+      color: inherit; }
+      .home-page-section .list-text h3 a:hover {
+        color: #555152; }
   .home-page-section .list-text .fa {
     font-size: 1.4em; }
   .home-page-section .list-text .wrapp {
@@ -331,7 +380,7 @@ body {
       font-size: 1.2em;
       color: #00709e; }
 
-.home-page-section .news h2 {
+.home-page-section .news h3 {
   background-color: #00709e; }
 
 .home-page-section .news li {
@@ -346,8 +395,10 @@ body {
 
 .home-page-section .announc {
   margin-bottom: 20px; }
-  .home-page-section .announc h2 {
+  .home-page-section .announc h3 {
     background-color: #b5353b; }
+    .home-page-section .announc h3 a {
+      text-decoration: none; }
   .home-page-section .announc ul {
     font: 1.2em "Muli", sans-serif;
     padding: 20px 0 0;
@@ -370,9 +421,11 @@ body {
     .home-page-section .announc a:hover {
       text-decoration: none; }
 
-.home-page-section .calendar h2 {
+.home-page-section .calendar h3 {
   color: #555152;
   background-color: #f1cc32; }
+  .home-page-section .calendar h3 a:hover {
+    color: #ffffff; }
 
 .home-page-section .calendar .wrapp {
   font: 1.2em "Muli", sans-serif; }
@@ -382,18 +435,23 @@ body {
   .home-page-section .calendar ul li {
     margin-bottom: 20px; }
 
-.home-page-section .calendar h3, .home-page-section .calendar strong {
+.home-page-section .calendar .month,
+.home-page-section .calendar .month-data {
   font-size: 1.2em;
   font-weight: bold;
   color: #fdcd05;
   text-transform: uppercase; }
+  .home-page-section .calendar .month:hover,
+  .home-page-section .calendar .month-data:hover {
+    color: #555152; }
 
-.home-page-section .calendar strong {
+.home-page-section .calendar .month-data {
   float: left;
   margin-right: 10px; }
 
 .home-page-section .big-button {
   display: block;
+  margin: 0 -15px;
   padding: 10px 20px 20px;
   text-align: center;
   font-size: 1.5em;
@@ -562,6 +620,10 @@ body {
     height: 75px;
     margin: 40px 0;
     overflow: hidden; }
+  #header .nav-wrapper .main-nav > li .caret {
+    display: none; }
+  #header .nav-wrapper .main-nav > li:hover .hover-block {
+    display: block; }
   #header .nav-wrapper .hover-block {
     position: absolute;
     z-index: 5;
@@ -571,6 +633,35 @@ body {
     #header .nav-wrapper .hover-block:before {
       top: 0;
       left: 50%; }
+  .bottom-nav #welcome-navbar-collapse .nav-button {
+    width: -webkit-calc(100% / 7);
+    width: calc(100% / 7);
+    padding: 10px 5px;
+    border-right: 1px solid #ffffff; }
+    .bottom-nav #welcome-navbar-collapse .nav-button:hover .hover-block, .bottom-nav #welcome-navbar-collapse .nav-button:focus .hover-block {
+      display: block; }
+    .bottom-nav #welcome-navbar-collapse .nav-button.first {
+      border-left: 1px solid #ffffff; }
+  .bottom-nav #welcome-navbar-collapse .hover-block {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    margin: 0;
+    padding: 30px 0;
+    border-top: 0; }
+    .bottom-nav #welcome-navbar-collapse .hover-block:before {
+      top: 0;
+      left: 14%; }
+  .bottom-nav #welcome-navbar-collapse .caret {
+    display: none; }
+  .bottom-nav #welcome-navbar-collapse .last-nav-button .hover-block {
+    right: 0;
+    left: auto; }
+    .bottom-nav #welcome-navbar-collapse .last-nav-button .hover-block:before {
+      left: auto;
+      right: 14%; }
   .welcome-top-nav .main-nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -585,32 +676,7 @@ body {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
-  .welcome-top-nav .hover-block {
-    position: absolute;
-    z-index: 2;
-    top: 100%;
-    left: 0;
-    width: 300px;
-    margin: 0;
-    padding: 30px 0;
-    border-top: 0; }
-    .welcome-top-nav .hover-block:before {
-      top: 0;
-      left: 14%; }
-  .welcome-top-nav .last-nav-button .hover-block {
-    right: 0;
-    left: auto; }
-    .welcome-top-nav .last-nav-button .hover-block:before {
-      left: auto;
-      right: 14%; }
-  .welcome-top-nav .nav-button {
-    width: -webkit-calc(100% / 7);
-    width: calc(100% / 7);
-    padding: 10px 5px;
-    border-right: 1px solid #ffffff; }
-    .welcome-top-nav .nav-button.first {
-      border-left: 1px solid #ffffff; }
-  .home-page-section .first-h2 {
+  .home-page-section .first-h {
     margin-bottom: 0;
     text-align: right; }
   .home-page-section .first-p {
@@ -626,6 +692,8 @@ body {
     margin-bottom: 30px; }
   .home-page-section .big-button {
     line-height: 1.4em; }
+  .big-button {
+    margin: 0; }
   #footer .top-flex-group {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -674,6 +742,8 @@ body {
     font: 15px 'Lato', sans-serif; }
   #header .nav-wrapper .hover-block {
     width: 150px; }
+  .bottom-nav #welcome-navbar-collapse .nav-button {
+    padding: 10px; }
   .welcome-top-nav .hover-block {
     width: 400px; }
   .home-page-section .big-button {

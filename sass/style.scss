@@ -24,6 +24,7 @@ body {
 //--------HEADER--------
 
 #header{
+
  .top-register {
    color: $top-nav-color;
    text-align: right;
@@ -89,8 +90,8 @@ body {
     .collapsing {
       position: absolute;
       top: 70px;
-      left: 0;
-      right: 0;
+      left: 15px;
+      right: 15px;
       z-index: 4;
       background-color: #ffffff;
     }
@@ -98,14 +99,27 @@ body {
     .collapse.in {
       position: absolute;
       top: 70px;
-      left: 0;
-      right: 0;
+      left: 15px;
+      right: 15px;
       z-index: 4;
       background-color: #ffffff;
     }
 
     .main-nav {
       padding: 10px 0 0;
+
+      .open {
+        > a {
+          color: $nav-hover-color;
+          background-color: transparent;
+        }
+
+        .caret {
+          border-top: 6px dashed $nav-hover-color;
+          border-right: 6px solid transparent;
+          border-left: 6px solid transparent;
+        }
+      }
 
       > li {
         padding: 0 5px;
@@ -119,21 +133,32 @@ body {
         }
 
         > a {
+          display: inline-block;
           padding: 0;
           text-transform: uppercase;
+
 
           &:hover {
             color: $nav-hover-color;
           }
         }
 
-        &:hover {
-          .hover-block {
-            display: block;
+        .caret {
+          margin: 0 0 0 1em;
+          border-top: 6px dashed;
+          border-right: 6px solid transparent;
+          border-left: 6px solid transparent;
+
+          &:hover {
+            border-top: 6px dashed $nav-hover-color;
+            border-right: 6px solid transparent;
+            border-left: 6px solid transparent;
           }
         }
       }
     }
+
+
 
     .hover-block {
       positton: relative;
@@ -145,6 +170,8 @@ body {
       text-align: center;
       background-color: #acaaaa;
       border-top: 10px solid #ffffff;
+      border-radius: 0;
+      box-shadow: none;
 
       a {
         color: #ffffff;
@@ -152,6 +179,7 @@ body {
 
         &:hover {
           color: $nav-hover-color;
+          background-color: transparent;
         }
       }
 
@@ -168,12 +196,92 @@ body {
   }
 }
 
-//--------Welcome-section--------
-.welcome-section {
+//--------BOTTOM-NAV--------
+.bottom-nav {
   background-color: #898686;
 
   #welcome-navbar-collapse {
     padding: 0;
+
+    .nav-button {
+      position: relative;
+      padding: 10px 5px;
+      font-size: 1.1em;
+      color: #ffffff;
+    }
+
+    .open {
+      .button-nav {
+        background-color: transparent;
+        color: $nav-hover-color;
+      }
+
+      .caret {
+        border-top: 8px dashed $nav-hover-color;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+      }
+    }
+
+    .button-nav {
+      display: inline-block;
+      float: left;
+      padding: 0;
+      text-transform: uppercase;
+      text-align: center;
+      color: inherit;
+      line-height: inherit;
+
+      &:hover {
+        color: $nav-hover-color;
+      }
+    }
+
+    .caret {
+      margin: 0.2em 0 0 1em;
+      border-top: 8px dashed;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent;
+
+      &:hover {
+          border-top: 8px dashed $nav-hover-color;
+          border-right: 8px solid transparent;
+          border-left: 8px solid transparent;
+      }
+    }
+
+    .hover-block {
+      width: 80%;
+      margin:0 20px;
+      padding: 15px 0 10px;
+      font-size: 0.9em;
+      line-height: 1.8em;
+      background-color: #f6f6f6;
+      border-top: 5px solid #898686;
+      border-radius: 0;
+
+      li {
+        padding-left: 25px;
+      }
+
+      a {
+        color: $top-nav-color;
+
+        &:hover {
+          color: $nav-hover-color;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 27px;
+        left: 15%;
+        border: 15px solid transparent;
+        border-top: 15px solid #898686;
+      }
+    }
   }
 }
 
@@ -208,8 +316,8 @@ body {
   .collapsing {
     position: absolute;
     top: 50px;
-    left: 10px;
-    right: 10px;
+    left: 15px;
+    right: 15px;
     z-index: 1;
     background-color: #898686;
   }
@@ -217,8 +325,8 @@ body {
   .collapse.in {
     position: absolute;
     top: 50px;
-    left: 10px;
-    right: 10px;
+    left: 15px;
+    right: 15px;
     z-index: 1;
     background-color: #898686;
   }
@@ -230,78 +338,31 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-
-    .nav-button {
-      position: relative;
-      padding: 10px 5px;
-      font-size: 1.1em;
-      color: #ffffff;
-
-      &:hover,
-      &:focus {
-        .hover-block {
-          display: block;
-        }
-      }
-    }
-  }
-
-  .button-nav {
-    border: none;
-    background: transparent;
-    text-transform: uppercase;
-  }
-
-  .hover-block {
-    width: 80%;
-    margin:0 20px;
-    padding: 15px 0 10px;
-    font-size: 0.9em;
-    line-height: 1.8em;
-    background-color: #f6f6f6;
-    border-top: 5px solid #898686;
-
-    li {
-      padding-left: 25px;
-    }
-
-    a {
-      color: $top-nav-color;
-
-      &:hover {
-        color: $nav-hover-color;
-      }
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: 3;
-      top: 27px;
-      left: 15%;
-      border: 15px solid transparent;
-      border-top: 15px solid #898686;
-    }
   }
 }
 
 
+
 //-------------home-page-section-----
 .home-page-section {
-  header {
+  .welcome {
     padding: 10px 15px 10px 6em;
     position: relative;
     color: #ffffff;
     background: #61a70a;
 
-    h1 {
+    p {
       font-size: 1.6em;
       line-height: 1.2em;
       font-weight: bold;
       text-transform: uppercase;
     }
-    p {
-      font-size: 1.1em;
+
+    span {
+      display: block;
+      font-size: 0.9em;
+      text-transform: none;
+      font-weight: normal;
     }
 
     &:before {
@@ -320,7 +381,7 @@ body {
     padding-bottom: 45px;
   }
 
-  .first-h2 {
+  .first-h {
     margin-bottom: 15px;
     font-size: 1.6em;
     text-transform: uppercase;
@@ -342,13 +403,21 @@ body {
       padding: 0;
     }
 
-    h2 {
+    h3 {
       padding: 10px;
       font-size: 1.5em;
       color: #ffffff;
       font-weight: bold;
       text-align: center;
       text-transform: uppercase;
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: $top-nav-color;
+        }
+      }
     }
 
     .fa {
@@ -392,7 +461,7 @@ body {
   }
 
   .news {
-    h2 {
+    h3 {
       background-color: $blue;
     }
 
@@ -415,8 +484,11 @@ body {
   .announc {
     margin-bottom: 20px;
 
-    h2 {
+    h3 {
       background-color: $red;
+      a {
+        text-decoration: none;
+      }
     }
 
     ul {
@@ -451,9 +523,14 @@ body {
   }
 
   .calendar {
-    h2 {
+    h3 {
       color: $top-nav-color;
       background-color: $yellow;
+      a {
+        &:hover {
+          color: #ffffff;
+        }
+      }
     }
 
     .wrapp {
@@ -468,24 +545,27 @@ body {
       }
     }
 
-    h3, strong {
+    .month,
+    .month-data {
       font-size: 1.2em;
       font-weight: bold;
       color: #fdcd05;
       text-transform: uppercase;
+
+      &:hover {
+        color: $top-nav-color;
+      }
     }
 
-    strong {
+    .month-data {
       float: left;
       margin-right: 10px;
     }
-
-
-
   }
 
   .big-button {
     display: block;
+    margin: 0 -15px;
     padding: 10px 20px 20px;
     text-align: center;
     font-size: 1.5em;

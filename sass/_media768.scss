@@ -13,6 +13,19 @@
     }
 
     .nav-wrapper {
+      .main-nav {
+        > li {
+          .caret {
+            display: none;
+          }
+           &:hover {
+            .hover-block {
+              display: block;
+            }
+          }
+        }
+      }
+
       .hover-block {
         position: absolute;
         z-index: 5;
@@ -28,6 +41,61 @@
     }
   }
 
+  .bottom-nav {
+
+    #welcome-navbar-collapse {
+
+      .nav-button {
+        width: calc(100% / 7);
+        padding: 10px 5px;
+        border-right: 1px solid #ffffff;
+
+        &:hover,
+        &:focus {
+          .hover-block {
+            display: block;
+          }
+        }
+
+        &.first {
+          border-left: 1px solid #ffffff;
+        }
+      }
+
+      .hover-block {
+        position: absolute;
+        z-index: 2;
+        top: 100%;
+        left: 0;
+        width: 300px;
+        margin: 0;
+        padding: 30px 0;
+        border-top: 0;
+
+        &:before {
+          top: 0;
+          left: 14%;
+        }
+      }
+      .caret {
+        display: none;
+      }
+
+      .last-nav-button {
+        .hover-block {
+          right: 0;
+          left: auto;
+
+          &:before {
+            left: auto;
+            right: 14%;
+          }
+        }
+      }
+
+    }
+  }
+
   .welcome-top-nav {
 
     .main-nav {
@@ -35,48 +103,10 @@
       flex-direction: row;
       align-items: stretch;
     }
-
-    .hover-block {
-      position: absolute;
-      z-index: 2;
-      top: 100%;
-      left: 0;
-      width: 300px;
-      margin: 0;
-      padding: 30px 0;
-      border-top: 0;
-
-      &:before {
-        top: 0;
-        left: 14%;
-      }
-    }
-
-    .last-nav-button {
-      .hover-block {
-        right: 0;
-        left: auto;
-
-        &:before {
-          left: auto;
-          right: 14%;
-        }
-      }
-    }
-
-      .nav-button {
-      width: calc(100% / 7);
-      padding: 10px 5px;
-      border-right: 1px solid #ffffff;
-
-      &.first {
-        border-left: 1px solid #ffffff;
-      }
-    }
   }
 
   .home-page-section {
-    .first-h2 {
+    .first-h {
       margin-bottom: 0;
       text-align: right;
     }
@@ -112,6 +142,11 @@
       line-height: 1.4em;
     }
   }
+
+  .big-button {
+    margin: 0;
+  }
+
   #footer {
 
     .top-flex-group {
